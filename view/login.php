@@ -17,6 +17,25 @@
     <td><input type="password" id="password" name="password"></td>
 </tr>
 <tr>
+                <td>
+                    <label for="UC">
+                       User Category :
+                    </label>
+
+                </td>
+                <td>
+                    <select name="UC" id="UC">
+                   
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="Participant">Participants</option>
+                        <option value="Judge">Judge</option>
+                        <option value="Admin">Admin</option>
+                        
+                    </select>
+                   
+                </td>
+            </tr>
+<tr>
     <td>
         <input type="submit" id="submit" name="submit">
         <input type="reset" id="reset" name="reset" >
