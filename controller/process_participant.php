@@ -84,8 +84,9 @@ if (isset($_REQUEST["submit_button"])) {
     $imageError = "Enter a file";
 }
 else{
-    $imageError= "".$_FILES["image"]["name"];
-    move_uploaded_file($_FILES["image"]["tmp_name"], "../uploads/".$_REQUEST["email"].".jpg");
+    $image = $_FILES['image']['name'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    move_uploaded_file($image_tmp_name, '../uploads/'.$image);
 }
 
 $existingdata=file_get_contents("../data/jsondata.json");

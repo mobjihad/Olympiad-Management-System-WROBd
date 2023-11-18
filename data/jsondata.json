@@ -50,5 +50,31 @@
         "pno": "sdfsdf",
         "eno": "sdfsdf",
         "file": "..\/uploads\/x@m.com.jpg"
+    },
+    {
+        "fname": "dsff",
+        "lname": "dsf",
+        "email": "1@m.com",
+        "password": "sadasd",
+        "DOB": "2023-11-01",
+        "gender": "Male",
+        "institution": "676732",
+        "division": "Barisal",
+        "pno": "112213213213",
+        "eno": "123123123",
+        "file": "..\/uploads\/1@m.com.jpg"
+    },
+    {
+        "fname": "hiii",
+        "lname": "sdad",
+        "email": "d@n.com",
+        "password": "saSASA",
+        "DOB": "2023-11-02",
+        "gender": "Male",
+        "institution": "SADASD",
+        "division": "Chittagong",
+        "pno": "13124234324",
+        "eno": "4234234",
+        "file": "..\/uploads\/d@n.com.jpg"
     }
 ]

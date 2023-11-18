@@ -30,7 +30,7 @@ if($Category=="Participant"){
 if($uStatus==TRUE){
 
     echo "Success" ; 
-    header('Location:../view/home.php');
+    header('Location:../view/home_participant.php');
     exit();
 }else {
 
@@ -64,7 +64,7 @@ if($uStatus==TRUE){
 if($uStatus==TRUE){
 
     echo "Success" ; 
-    header('Location:../view/home.php');
+    header('Location:../view/home_volunteer.php');
     exit();
 }else {
 
@@ -102,7 +102,7 @@ if($uStatus==TRUE){
 if($uStatus==TRUE){
 
     echo "Success" ; 
-    header('Location:../view/home.php');
+    header('Location:../view/home_judge.php');
     exit();
 }else {
 
@@ -138,7 +138,7 @@ if($uStatus==TRUE){
 if($uStatus==TRUE){
 
     echo "Success" ; 
-    header('Location:../view/home.php');
+    header('Location:../view/home_admin.php');
     exit();
 }else {
 
