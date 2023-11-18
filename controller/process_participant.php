@@ -86,9 +86,10 @@ if (isset($_REQUEST["submit_button"])) {
 else{
     $image = $_FILES['image']['name'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
-    move_uploaded_file($image_tmp_name, '../uploads/'.$image);
+    move_uploaded_file($image_tmp_name,'../uploads/'.$_REQUEST["email"] . ".jpg");
 }
 
+$Image_Name = '../uploads/'.$_REQUEST["email"] . ".jpg" ; 
 $existingdata=file_get_contents("../data/jsondata.json");
 $phpdata=json_decode($existingdata);
     $formdata=array(
@@ -102,7 +103,7 @@ $phpdata=json_decode($existingdata);
         "division"=>$_REQUEST["division"],
         "pno"=>$_REQUEST["pno"],
         "eno"=>$_REQUEST["eno"],
-        "file"=>"../uploads/".$_REQUEST["email"].".jpg",
+        "file"=>$Image_Name,
     );
     $phpdata[]=$formdata;
 

@@ -14,7 +14,7 @@ echo $printcookie;
 </head>
 <body>
 <table>
-        <form action="" method="post">
+        <form action="" method="post" enctype = "multipart/form-data" >
             <tr>
             <td><label for="first_name">First Name:</label></td>
                 <td><input type="text" id="first_name" name="first_name">
