@@ -1,7 +1,6 @@
 <?php 
-include("../controller/process_createteam.php")
+include("../controller/process_createteam.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +15,17 @@ include("../controller/process_createteam.php")
                 <td><h4>Create a team</h4></td>
             </tr>
             <tr>
-                <td><label for="Tname">Team Name</label></td>
-                <td><input type="text" id="Tname" name="Tname"></td>
+            <select name="Seg" id="Seg">
+                    <option value="">Segment</option>
+                        <option value="Future Innovators">Future Innovators</option>
+                        <option value="Future Engineers">Future Engineers</option>
+                       
+                    </select>
+
+</tr>
+            <tr>
+                <td><label for="tname">Team Name</label></td>
+                <td><input type="text" id="tname" name="tname"></td>
             </tr>
             <tr>
                 <td><label for="tlead">Team Leader :</label></td>
@@ -78,6 +86,9 @@ include("../controller/process_createteam.php")
             <tr>
                 <td><label for="part4email">Email :</label></td>
                 <td><input type="text" id="part5email" name="part5email" ></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" name="submit" > <input type="reset" id="reset" name="reset" ></td>
             </tr>
             
         </table>
