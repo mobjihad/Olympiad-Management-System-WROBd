@@ -1,9 +1,10 @@
 <?php if(isset($_REQUEST["submit"])){
 
 
-$existingdata = file_get_contents("../data/teamdetails.json");
+$existingdata = file_get_contents("../data/team_details.json");
 $phpdata = json_decode($existingdata);
 $formdata = array(
+    "segment" => $_REQUEST["Seg"],
     "teamname" => $_REQUEST["tname"],
     "teamleader"=>$_REQUEST["tlead"], 
     "tleaderemail"=>$_REQUEST["tleademail"], 
@@ -25,7 +26,7 @@ $phpdata[] = $formdata;
 
 $jsondata = json_encode($phpdata, JSON_PRETTY_PRINT);
 
-if (file_put_contents("../data/teamdetails.json", $jsondata)) {
+if (file_put_contents("../data/team_details.json", $jsondata)) {
     echo "file written successfully";
 } else {
     echo "file written failed";

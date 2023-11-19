@@ -6,6 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-<h1> Welcome Judge<h1>   
+    <H1> Welcome Judge <H1> 
+
+  <table>
+<tr>
+ 
+  <td><a href="show_PD.php"><input type="button" value="Show Participants"></a></td>
+  <td><a href="show_SD.php"><input type="button" value="Show Scoreboard"></a></td>
+  
+
+
+</tr>
+<tr>
+  
+ 
+ 
+
+
+</tr>
+<tr>
+  
+  <td><a href="Create_report.php"><input type="button" value="Create Report"></a></td>
+  <td><a href="Scoreboard.php"><input type="button" value="Entry Score"></a></td>
+  
+
+
+</tr>
+
+<tr>
+  
+  
+  <td><a href="show_RD.php"><input type="button" value="Manage Reports"></a></td>
+
+
+</tr>
+</table>
 </body>
 </html>

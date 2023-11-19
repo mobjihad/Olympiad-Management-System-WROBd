@@ -35,7 +35,7 @@ include("../controller/process_createevent.php");
             </tr>
             <tr>
                 <td><label for="eventdatetime">Event Date-Time :</label></td>
-                <td><input type="Date-Time" id="eventdatetime" name="eventdatetime" ></td>
+                <td><input type="date" id="eventdatetime" name="eventdatetime" ></td>
             </tr>
             <tr>
                 <td><input type="submit" value="submit" name="submit"><input type="reset" value="reset" name="reset"> </td>

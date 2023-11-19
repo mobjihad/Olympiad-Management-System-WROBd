@@ -30,6 +30,7 @@
                         <option value="Participant">Participants</option>
                         <option value="Judge">Judge</option>
                         <option value="Admin">Admin</option>
+                        <option value="Manager">Manager</option>
                         
                     </select>
                    

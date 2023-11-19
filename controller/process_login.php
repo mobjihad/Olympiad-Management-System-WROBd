@@ -150,7 +150,45 @@ if($uStatus==TRUE){
 }
 
 
+}else if($Category=="Manager"){
+
+
+    $data = file_get_contents('../data/manager.json');
+    
+    $parsed_data = json_decode($data,true);
+
+   $uStatus = FALSE ; 
+    foreach ($parsed_data as $entry) {
+        // Access array elements using square brackets
+       // echo $entry['email'] . " " . $entry['password'] . "</br>";
+        if(($entry['email'])==$Username && ($entry['password'])==$password){
+
+            $uStatus = TRUE ; 
+            break; 
+        }
+    
+    }
+
+  
+   
+    
+if($uStatus==TRUE){
+
+    echo "Success" ; 
+    header('Location:../view/home_manager.php');
+    exit();
+}else {
+
+    echo "Error , Try Again " ;
+    header('Location:../view/login.php');
+    exit();
+
+  
 }
+
+
+}
+
 
 
 

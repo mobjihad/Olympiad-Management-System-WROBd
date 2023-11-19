@@ -15,12 +15,14 @@ include("../controller/process_createteam.php");
                 <td><h4>Create a team</h4></td>
             </tr>
             <tr>
+                <td>Segment</td>
+                <td>
             <select name="Seg" id="Seg">
                     <option value="">Segment</option>
                         <option value="Future Innovators">Future Innovators</option>
                         <option value="Future Engineers">Future Engineers</option>
                        
-                    </select>
+                    </select> </td>
 
 </tr>
             <tr>
