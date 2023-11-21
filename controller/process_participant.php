@@ -107,7 +107,7 @@ $phpdata=json_decode($existingdata);
     );
     $phpdata[]=$formdata;
 
-    $jsondata=json_encode($phpdata,JSON_PRETTY_PRINT);
+    $jsondata=json_encode($phpdata);
 
 if(file_put_contents("../data/jsondata.json",$jsondata))
 {

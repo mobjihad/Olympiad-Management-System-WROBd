@@ -5,5 +5,12 @@
         "Innovation": "12",
         "Usability": "122",
         "Cost Impact": "122"
+    },
+    {
+        "seg": "",
+        "teamname": "Aiub",
+        "Innovation": "00",
+        "Usability": "01",
+        "Cost Impact": "02"
     }
 ]
