@@ -1,3 +1,38 @@
+<?php 
+ 
+ session_start();
+ if(isset($_SESSION["Username"])){
+
+     $Category = $_SESSION["Category"];
+
+     if($Category=="Participant"){
+
+        header('Location: home_participant.php');
+        exit();
+
+     }else if($Category=="Admin"){
+        header('Location: home_admin.php');
+         exit();
+
+     }else if($Category=="Judge"){
+
+        header('Location:home_judge.php');
+        exit();
+
+     }else if($Category=="Volunteer"){
+
+        header('Location:home_volunteer.php');
+        exit();
+
+     }else if($Category=="Manager"){
+
+        header('Location:home_manager.php');
+        exit();
+
+     }
+ }
+?>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,3 +89,4 @@
     </form>
 </body>
 </html>
+ 

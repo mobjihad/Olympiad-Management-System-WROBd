@@ -1,9 +1,9 @@
 <?php 
 require("../controller/process_participant_V2.php");
 
-if(isset($_REQUEST["Submit"])){
+if(isset($_REQUEST["submit"])){
 
-    $user = new addParticipant() ; 
+    $user = new addParticipant($_REQUEST['email'] , $_REQUEST['password']) ; 
 }
 
 
@@ -22,21 +22,21 @@ if(isset($_REQUEST["Submit"])){
             <tr>
             <td><label for="first_name">First Name:</label></td>
                 <td><input type="text" id="first_name" name="first_name">
-                    <?php echo $firstnameError; ?> </td>
+                    <?php echo @$user->firstnameError; ?> </td>
             </tr>
             <tr>
                 <td><label for="last_name">Last Name :</label></td>
                 <td><input type="text" id="last_name" name="last_name">
-                    <?php echo $lastnameError; ?> </td>
+                    <?php echo @$user->lastnameError; ?> </td>
             </tr>
             <tr>
                 <td><label for="email">Email :</label></td>
-                <td><input type="email" id="email" name="email"><?php echo $emailError ;?></td>
+                <td><input type="email" id="email" name="email"><?php echo @$user->emailError ;?></td>
                 
             </tr>
             <tr>
                 <td><label for="password">Password :</label></td>
-                <td><input type="password" id="password" name="password"><?php echo $passwordError ;?></td>
+                <td><input type="password" id="password" name="password"><?php echo @$user->passwordError ;?></td>
             </tr>
             <tr>
                 <td><label for="bdate">Date of Birth :</label></td>
@@ -49,12 +49,12 @@ if(isset($_REQUEST["Submit"])){
                     <input type="radio" id="gender" name="gender" value="Male">Male
                     <input type="radio" id="gender" name="gender" value="Female">Female
                     <input type="radio" id="gender" name="gender" value="Rather not say" checked="checked">Rather Not Say
-                    <?php echo $genderError ;?>
+                    <?php echo @$user->genderError ;?>
                 </td>
             </tr>
             <tr>
                 <td><label for="institution">Institution :</label></td>
-                <td> <input type="text" id="institution" name="institution"> <?php echo $institutionError; ?></td>
+                <td> <input type="text" id="institution" name="institution"> <?php echo @$user->institutionError; ?></td>
             </tr>
 
             <tr>
@@ -76,16 +76,16 @@ if(isset($_REQUEST["Submit"])){
                         <option value="Sylhet">Sylhet</option>
                         <option value="Mymensingh">Mymensingh</option>
                     </select>
-                    <?php echo $divisionError; ?>
+                    <?php echo @$user->divisionError; ?>
                 </td>
             </tr>
             <tr>
                 <td><label for="pno">Phone Number :</label></td>
-                <td><input type="text" id="pno" name="pno"><?php echo $pnoError; ?></td>
+                <td><input type="text" id="pno" name="pno"><?php echo @$user->pnoError; ?></td>
             </tr>
             <tr>
                 <td><label for="eno">Emergency Contact :</label></td>
-                <td><input type="tel" id="eno" name="eno"><?php echo $enoError; ?></td>
+                <td><input type="tel" id="eno" name="eno"><?php echo @$user->enoError; ?></td>
             </tr>
             <tr>
                 <td><label for="image">Profile Picture :</label></td>
@@ -100,7 +100,7 @@ if(isset($_REQUEST["Submit"])){
                 <input type="reset" value="reset"></td>
             </tr>
             <tr>  
-                   <td> <?php echo @user->$userName_dup; ?> </td> 
+                   <td> <?php echo @$user->userName_dup; ?> </td> 
             </tr>
             <tr>
                 <td>

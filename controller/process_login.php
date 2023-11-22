@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 if(isset($_POST['submit'])){
 
         $Username = $_POST['uname'];
@@ -19,6 +20,8 @@ if($Category=="Participant"){
         if(($entry['email'])==$Username && ($entry['password'])==$password){
 
             $uStatus = TRUE ; 
+            $_SESSION["Category"] = $Category ;
+            $_SESSION["Username"] = $entry['fname'] ; 
             break; 
         }
     
@@ -28,7 +31,8 @@ if($Category=="Participant"){
    
     
 if($uStatus==TRUE){
-
+    
+    
     echo "Success" ; 
     header('Location:../view/home_participant.php');
     exit();
@@ -42,6 +46,7 @@ if($uStatus==TRUE){
 }
 }else if($Category=="Volunteer"){
 
+    
     $data = file_get_contents('../data/voljsondata.json');
     
     $parsed_data = json_decode($data,true);
@@ -53,6 +58,8 @@ if($uStatus==TRUE){
         if(($entry['email'])==$Username && ($entry['password'])==$password){
 
             $uStatus = TRUE ; 
+            $_SESSION["Category"] = $Category ;
+            $_SESSION["Username"] = $entry['fname'] ; 
             break; 
         }
     
@@ -62,7 +69,7 @@ if($uStatus==TRUE){
    
     
 if($uStatus==TRUE){
-
+   
     echo "Success" ; 
     header('Location:../view/home_volunteer.php');
     exit();
@@ -91,6 +98,8 @@ if($uStatus==TRUE){
         if(($entry['email'])==$Username && ($entry['password'])==$password){
 
             $uStatus = TRUE ; 
+            $_SESSION["Category"] = $Category ;
+            $_SESSION["Username"] = $entry['fname'] ; 
             break; 
         }
     
@@ -105,7 +114,7 @@ if($uStatus==TRUE){
     header('Location:../view/home_judge.php');
     exit();
 }else {
-
+   
     echo "Error , Try Again " ;
     header('Location:../view/login.php');
     exit();
@@ -127,6 +136,8 @@ if($uStatus==TRUE){
         if(($entry['email'])==$Username && ($entry['password'])==$password){
 
             $uStatus = TRUE ; 
+            $_SESSION["Category"] = $Category ;
+            $_SESSION["Username"] = $entry['fname'] ; 
             break; 
         }
     
@@ -137,6 +148,7 @@ if($uStatus==TRUE){
     
 if($uStatus==TRUE){
 
+     
     echo "Success" ; 
     header('Location:../view/home_admin.php');
     exit();
@@ -164,6 +176,8 @@ if($uStatus==TRUE){
         if(($entry['email'])==$Username && ($entry['password'])==$password){
 
             $uStatus = TRUE ; 
+            $_SESSION["Category"] = $Category ;
+            $_SESSION["Username"] = $entry['fname'] ; 
             break; 
         }
     
@@ -173,7 +187,7 @@ if($uStatus==TRUE){
    
     
 if($uStatus==TRUE){
-
+    
     echo "Success" ; 
     header('Location:../view/home_manager.php');
     exit();
