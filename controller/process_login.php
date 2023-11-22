@@ -22,6 +22,7 @@ if($Category=="Participant"){
             $uStatus = TRUE ; 
             $_SESSION["Category"] = $Category ;
             $_SESSION["Username"] = $entry['fname'] ; 
+            setcookie("Visit","1", time()+10,"/");
             break; 
         }
     
@@ -60,6 +61,7 @@ if($uStatus==TRUE){
             $uStatus = TRUE ; 
             $_SESSION["Category"] = $Category ;
             $_SESSION["Username"] = $entry['fname'] ; 
+            setcookie("Visit","1", time()+10,"/");
             break; 
         }
     
@@ -99,7 +101,8 @@ if($uStatus==TRUE){
 
             $uStatus = TRUE ; 
             $_SESSION["Category"] = $Category ;
-            $_SESSION["Username"] = $entry['fname'] ; 
+            $_SESSION["Username"] = $entry['fname'] ;
+            setcookie("Visit","1", time()+10,"/"); 
             break; 
         }
     
@@ -138,6 +141,7 @@ if($uStatus==TRUE){
             $uStatus = TRUE ; 
             $_SESSION["Category"] = $Category ;
             $_SESSION["Username"] = $entry['fname'] ; 
+            setcookie("Visit","1", time()+10,"/");
             break; 
         }
     
@@ -178,6 +182,7 @@ if($uStatus==TRUE){
             $uStatus = TRUE ; 
             $_SESSION["Category"] = $Category ;
             $_SESSION["Username"] = $entry['fname'] ; 
+            setcookie("Visit","1", time()+10,"/");
             break; 
         }
     

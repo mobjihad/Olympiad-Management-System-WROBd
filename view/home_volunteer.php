@@ -19,11 +19,17 @@ if(!isset($_SESSION["Username"])) {
    
   unset($_SESSION["Username"]);
   unset($_SESSION["Category"]);
+  unset($_COOKIE["Visit"]);
   header('Location:login.php');
   exit();
      
  }
-
+ if(isset($_COOKIE["Visit"])){
+  echo "Welcome Back ".$_SESSION["Username"];
+      
+ }else{
+  echo "Welcome ".$_SESSION["Username"];
+ }
  ?>
 
 <!DOCTYPE html>
